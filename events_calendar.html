@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallaudet University Calendar</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap -->
+    <link rel="stylesheet" href="css/plugins/select_option1.css"><!-- select box -->
+    <link rel="stylesheet" href="css/plugins/fullcalendar.min.css"><!-- Calendar-->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"><!-- font-awesome-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,700' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/plugins/animate.css">
+    <link rel="stylesheet" href="css/style.css"><!-- custom -->
+    <link rel="stylesheet" href="css/default.css" id="option_color"><!-- custom -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="bodyColor">
+
+<div class="main_wrapper container">
+    <div class="header fixed-top">
+        <nav class="navbar navbar-default">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="header_inner">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="active navbar-brand logo clearfix" href="index.html"><img src="img/logo.png"
+                                                                                                    alt=""
+                                                                                                    class="img-responsive"/></a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+
+                                    <li><a href="http://my.gallaudet.edu">My Gallaudet</a></li>
+                                    <li><a href="#">Calendar</a></li>
+
+                                    <li><a href="http://mail.gallaudet.edu">Webmail</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <input type="text" placeholder="Search" class="form-control">
+                                        </form>
+                                    </li>
+
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </nav><!-- navbar -->
+    </div>
+
+    <div class="inlineMenu margin-top">
+        <div class="container text-center">
+            <div class="row clearfix center-block">
+                <div class="col-xs-12">
+                    <ul class="list-inline">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About Gallaudet</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Administration</a></li>
+                                <li><a href="#">Campus Photos</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Employment Opportunities</a></li>
+                                <li><a href="#">Fast Facts</a></li>
+                                <li><a href="#">Giving to Gallaudet</a></li>
+                                <li><a href="#">Mission & Goals</a></li>
+                                <li><a href="#">Museum</a></li>
+                                <li><a href="#">Sustainability</a></li>
+                                <li><a href="#">University Communication</a></li>
+                                <li><a href="#">Visitors Center</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Admission</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">English Language Institute</a></li>
+                                <li><a href="#">Financial Aid</a></li>
+                                <li><a href="#">Graduate Admission</a></li>
+                                <li><a href="#">International Admission</a></li>
+                                <li><a href="#">Professional Studies</a></li>
+                                <li><a href="#">Undergraduate Admission</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Academic & Research</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Arts/Media</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Human Services</a></li>
+                                <li><a href="#">Humanities</a></li>
+                                <li><a href="#">Language/Culture</a></li>
+                                <li><a href="#">Science/Math/Technology</a></li>
+                                <li><a href="#">Minors</a></li>
+                                <li><a href="#">Online Majors</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Campus Life</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Arts/Media</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Human Services</a></li>
+                                <li><a href="#">Humanities</a></li>
+                                <li><a href="#">Language/Culture</a></li>
+                                <li><a href="#">Science/Math/Technology</a></li>
+                                <li><a href="#">Minors</a></li>
+                                <li><a href="#">Online Majors</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Athletics</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">BisonPASS</a></li>
+                                <li><a href="#">Intramurals</a></li>
+                                <li><a href="#">Composite Schedule</a></li>
+                                <li><a href="#">Summer Sport Camps</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Directory</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Search Staff</a></li>
+                                <li><a href="#">Search Campus</a></li>
+                                <li><a href="#">Shuttle Bus</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- col-xs-12 -->
+            </div><!-- row clearfix-->
+        </div><!-- container  -->
+    </div><!-- inlineMenu -->
+
+
+    <div class="full_banner">
+        <img src="img/events/banner.jpg" alt=""/>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="single_caption">
+                        <h1>Events Calendar</h1>
+                    </div><!--end single caption-->
+                </div>
+            </div>
+        </div>
+    </div><!--end full banner-->
+
+    <div class="calendar_outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="event_calendar">
+                        <div id="calendar" class="fc fc-ltr fc-unthemed">
+                            <div class="fc-toolbar">
+
+
+                                <div class="fc-left">
+                                    <div class="fc-button-group">
+                                        <button class="left"><span class="fa fa-chevron-left"></span></button>
+
+                                    </div>
+                                </div>
+                                <div class="fc-right">
+                                    <button class="left"><span class="fa fa-chevron-right"></span></button>
+                                </div>
+                                <div class="fc-center"><h2>November 2015</h2></div>
+                                <div class="fc-clear">
+                                </div>
+                            </div>
+
+                            <div class="fc-view-container" style="">
+                                <div class="fc-view fc-month-view fc-basic-view" style="">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <td class="fc-widget-header">
+                                                <div class="fc-row fc-widget-header">
+                                                    <table>
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Sun</th>
+                                                            <th>Mon</th>
+                                                            <th>Tue</th>
+                                                            <th>Wed</th>
+                                                            <th>Thu</th>
+                                                            <th>Fri</th>
+                                                            <th>Sat</th>
+
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="fc-widget-content">
+                                                <div class="fc-day-grid-container" style="">
+                                                    <div class="fc-day-grid">
+                                                        <div class="fc-row fc-week fc-widget-content">
+
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td class="other_month">28</td>
+                                                                        <td class="other_month">29</td>
+
+                                                                        <td class="other_month">30</td>
+                                                                        <td class="other_month">31</td>
+                                                                        <td>1</td>
+                                                                        <td>2</td>
+                                                                        <td>3</td>
+
+
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="fc-row fc-week fc-widget-content">
+
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td>5</td>
+                                                                        <td>6</td>
+                                                                        <td>7</td>
+                                                                        <td>8</td>
+                                                                        <td>9</td>
+                                                                        <td>10</td>
+
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="more" href="#">2 more...</a>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="fc-row fc-week fc-widget-content">
+
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td>11</td>
+                                                                        <td>12</td>
+                                                                        <td>13</td>
+                                                                        <td>14</td>
+                                                                        <td>15</td>
+                                                                        <td>16</td>
+                                                                        <td>17</td>
+
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="fc-row fc-week fc-widget-content">
+
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td>18</td>
+                                                                        <td>19</td>
+                                                                        <td>20</td>
+                                                                        <td>21</td>
+                                                                        <td>22</td>
+                                                                        <td>23</td>
+                                                                        <td>24</td>
+
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link gray" href="#">9th
+                                                                                grade Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="fc-event-container">
+                                                                            <a class="event_link" href="#">9th grade
+                                                                                Field Trip</a>
+                                                                            <div role="tooltip" class="tooltip top">
+                                                                                <div class="tooltip-arrow"></div>
+                                                                                <div class="tooltip-inner">
+                                                                                    <h4>9th grade Field Trip</h4>
+                                                                                    <h5>10 am to 2pm, </h5>
+                                                                                    <p>Lorem ipsum dolor sit amet,
+                                                                                        consectetur adipisicing elit,
+                                                                                        sed do eiusmod tempor incididunt
+                                                                                        ut labore et dolore magna
+                                                                                        aliqua. Ut enim ad minim veniam,
+                                                                                        quis nostrud exercitation...</p>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="fc-row fc-week fc-widget-content">
+
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <td>25</td>
+                                                                        <td>26</td>
+                                                                        <td>27</td>
+                                                                        <td>28</td>
+                                                                        <td>29</td>
+                                                                        <td>30</td>
+                                                                        <td class="other_month">1</td>
+
+
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end calendar outer-->
+
+    <div class="menuFooter">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-sm-3 col-xs-12">
+                    <ul class="menuLink clearfix">
+                        <li><a href="about.html">About Royal College</a></li>
+                        <li><a href="campus.html">About Campus</a></li>
+                        <li><a href="stuff.html">Staff Members</a></li>
+                        <li><a href="accommodation.html">Accommodation</a></li>
+                        <li><a href="about.html">Why Choose Us?</a></li>
+                    </ul>
+                </div><!-- col-sm-3 col-xs-12 -->
+                <div class="col-sm-3 col-xs-12 borderLeft clearfix">
+                    <ul class="menuLink clearfix">
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="photo_gallery.html">Photo Gallery</a></li>
+                        <li><a href="international_students.html">International Students</a></li>
+                    </ul>
+                </div><!-- col-sm-3 col-xs-12 -->
+                <div class="col-sm-3 col-xs-12 borderLeft clearfix">
+                    <ul class="menuLink clearfix">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="events_calendar.html">Upcoming Events</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </div><!-- col-sm-3 col-xs-12 -->
+                <div class="col-sm-3 col-xs-12 borderLeft clearfix">
+                    <div class="socialArea clearfix">
+                        <h5>Find us on:</h5>
+                        <ul class="list-inline ">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div><!-- social -->
+                    <div class="contactNo clearfix">
+                        <h5>Call us on:</h5>
+                        <h3>012-3434-456768</h3>
+                    </div><!-- social -->
+                </div><!-- col-sm-3 col-xs-12 -->
+            </div><!-- row clearfix -->
+        </div><!-- container -->
+    </div><!-- menuFooter -->
+    <div class="footer">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-sm-5 col-xs-12">
+                    <p class="copyRight">&copy; 2015 Copyright Colegio Preludio</p>
+                </div><!-- col-sm-6 col-xs-12 -->
+                <div class="col-sm-7 col-xs-12">
+                    <ul class="list-inline footerMenu">
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div><!-- col-sm-6 col-xs-12 -->
+            </div><!-- row clearfix -->
+        </div><!-- container -->
+    </div><!-- footer -->
+</div>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script><!-- jQuery master -->
+<script src="js/bootstrap/bootstrap.min.js"></script><!-- bootstrap -->
+<script src="js/plugins/jquery.flexslider.js"></script><!-- flexslider -->
+<script src="js/plugins/jquery.selectbox-0.1.3.min.js"></script><!-- select box -->
+<script src="js/plugins/jquery.magnific-popup.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/custom.js"></script><!-- custom js -->
+
+
+</body>
+</html>
