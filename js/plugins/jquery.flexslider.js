@@ -169,7 +169,7 @@
                             } else if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass(namespace + "active-slide")) {
                                 slider.direction = (slider.currentItem < target) ? "next" : "prev";
                                 slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
-                            }
+                }
                         });
                     } else {
                         el._slider = slider;
@@ -457,7 +457,7 @@
 
                             if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth / 2)) {
                                 slider.flexAnimate(target, slider.vars.pauseOnAction);
-                            } else {
+                } else {
                                 if (!fade) slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true);
                             }
                         }
@@ -524,10 +524,10 @@
                             if (!fade && slider.transitions) {
                                 if (!slider.vars.animationLoop) {
                                     dx = accDx / ((slider.currentSlide === 0 && accDx < 0 || slider.currentSlide === slider.last && accDx > 0) ? (Math.abs(accDx) / cwidth + 2) : 1);
-                                }
-                                slider.setProps(offset + dx, "setTouch");
-                            }
                         }
+                                slider.setProps(offset + dx, "setTouch");
+                    }
+                }
                     }
 
                     function onMSGestureEnd(e) {
@@ -535,7 +535,7 @@
                         var slider = e.target._slider;
                         if (!slider) {
                             return;
-                        }
+                }
                         if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
                             var updateDx = (reverse) ? -dx : dx,
                                 target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
@@ -544,15 +544,15 @@
                                 slider.flexAnimate(target, slider.vars.pauseOnAction);
                             } else {
                                 if (!fade) slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true);
-                            }
-                        }
+                    }
+                }
 
                         startX = null;
                         startY = null;
                         dx = null;
                         offset = null;
                         accDx = 0;
-                    }
+            }
                 }
             },
             resize: function () {
@@ -721,7 +721,7 @@
                         if (!slider.vars.animationLoop || !slider.atEnd) {
                             slider.animating = false;
                             slider.currentSlide = slider.animatingTo;
-                        }
+            }
                         slider.container.unbind("webkitTransitionEnd transitionend");
                         slider.container.bind("webkitTransitionEnd transitionend", function () {
                             slider.wrapup(dimension);
@@ -838,7 +838,7 @@
                                     return pos;
                             }
                         }
-                    }());
+            }());
 
                 return (posCalc * -1) + "px";
             }());
@@ -1044,7 +1044,7 @@
 
             // FlexSlider: removed() Callback
             slider.vars.removed(slider);
-        };
+    };
 
         //FlexSlider: Initialize
         methods.init();
@@ -1142,7 +1142,7 @@
                     if (options.start) options.start($this);
                 } else if ($this.data('flexslider') === undefined) {
                     new $.flexslider(this, options);
-                }
+        }
             });
         } else {
             // Helper strings to quickly perform functions on the slider
@@ -1167,6 +1167,6 @@
                 default:
                     if (typeof options === "number") $slider.flexAnimate(options, true);
             }
-        }
+    }
     }
 })(jQuery);

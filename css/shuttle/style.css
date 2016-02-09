@@ -1,0 +1,91 @@
+.trip {
+    color: #ffffff;
+    padding: 10px 0px;
+}
+
+.trip-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-image: url(../../images/bus_icon.png);
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+}
+
+.trip-info {
+    margin-left: 10px;
+    float: left;
+}
+
+.trip-time {
+    font-size: 1.8em;
+}
+
+.trip-duration {
+    font-size: 0.9em;
+}
+
+.no-result {
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.route-blue {
+    background-color: #1883f0;
+}
+
+.route-green {
+    background-color: #40a240;
+}
+
+.route-red {
+    background-color: #e94949;
+}
+
+.route-purple {
+    background-color: #854585;
+}
+
+.route-night {
+    background-color: #545454;
+}
+
+.customSelect {
+    background: #eaeaea;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.customSelect select {
+    color: #333;
+    background: transparent;
+    border: 0;
+    outline: none;
+    -webkit-appearance: none;
+    background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat right 50%;
+    border-radius: 0;
+    height: 50px;
+}
+
+.customSelect select:focus {
+    outline: none;
+}
+
+#topControls {
+    position: inherit;
+    z-index: 10000;
+    top: 0px;
+    height: 50px;
+    width: 100%;
+    background: #eaeaea;
+}
+
+#topControls .arrow {
+    font-size: 1.8em;
+    color: #333;
+    line-height: 1.8em;
+}
+
+#searchResult {
+    margin-top: 50px;
+}
