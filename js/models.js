@@ -148,7 +148,7 @@ var SearchResultView = Backbone.View.extend({
         else {
             var el = this.el;
             var html = '';
-            html += '<div class="col-lg-12">';
+            html += '<div class="col-md-11">';
             _.each(this.model.models, function (r) {
                 html += '<div class="row trip';
                 var cssClass = allRoutes.get(r.get("route")).get("cssClass");
